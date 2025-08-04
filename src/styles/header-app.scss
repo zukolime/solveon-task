@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Zrnic Cyr";
+  src: url(../fonts/zrniccyr_normal.ttf);
+}
+
+@import "./variables.scss";
+
+.header {
+  &__headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Zrnic Cyr";
+    font-size: 80px;
+    font-weight: 400;
+    line-height: normal;
+    &--big {
+      font-size: 250px;
+    }
+  }
+
+  &__logo {
+    width: 153px;
+    height: 114.267px;
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 27px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__item:last-child {
+    position: relative;
+  }
+
+  &__items--dropdown {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    padding: 16px 20px;
+    width: 330px;
+    gap: 20px;
+    border-radius: 20px;
+    background: rgba(239, 239, 239, 0.6);
+    backdrop-filter: blur(15px);
+  }
+
+  &__item--inner {
+    display: flex;
+
+    .header__link {
+      display: flex;
+      gap: 14px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #000000;
+      border-radius: 100%;
+
+      img {
+        fill: #000000;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 100%;
+    cursor: pointer;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__person-icon {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media (hover: hover) {
+  .header__link:hover {
+    color: $color-elements;
+  }
+
+  .header__item:hover .header__items--dropdown {
+    display: flex;
+  }
+
+  .header__profile:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header__title {
+    font-size: clamp(2.25rem, 1.7rem + 2.75vw, 5rem);
+    &--big {
+      font-size: clamp(8.75rem, 7.375rem + 6.88vw, 15.625rem);
+    }
+  }
+
+  .header__logo {
+    width: clamp(7.625rem, 7.237rem + 1.94vw, 9.563rem);
+    height: clamp(5.688rem, 5.388rem + 1.5vw, 7.188rem);
+  }
+}
