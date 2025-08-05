@@ -1,6 +1,8 @@
+import { ReactComponent as Arrow } from "../resources/icons/arrow-up.svg";
+import { ReactComponent as Logo } from "../resources/icons/logo.svg";
+import UIButton from "./UIButton";
+
 import "../styles/header-app.scss";
-import logo from "../resources/icons/logo.svg";
-import arrow from "../resources/icons/arrow-up-outline.svg";
 import person from "../resources/icons/person.svg";
 
 const HeaderApp = () => {
@@ -12,7 +14,7 @@ const HeaderApp = () => {
             <span className="header__title--big">Центр</span> лазерной медицины
           </h1>
           <div className="header__logo">
-            <img className="header__icon" src={logo} alt="Логотип центра лазерной медицины" />
+            <Logo className="header__icon" />
           </div>
         </div>
         <nav className="header__navbar">
@@ -74,7 +76,7 @@ const HeaderApp = () => {
                   <a href="/" className="header__link">
                     <p>справочник болезней</p>
                     <div>
-                      <img src={arrow} alt="Стрелка" />
+                      <Arrow className="header__arrow" />
                     </div>
                   </a>
                 </li>
@@ -88,7 +90,7 @@ const HeaderApp = () => {
           </ul>
 
           <div className="header__controls">
-            <button className="button">Записаться</button>
+            <UIButton></UIButton>
             <div className="header__profile">
               <a href="/">
                 <img className="header__person-icon" src={person} alt="Иконка человека" />

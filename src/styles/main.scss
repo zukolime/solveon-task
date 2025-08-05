@@ -34,21 +34,17 @@ ul {
   list-style: none;
 }
 
+main {
+  padding-bottom: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
-}
-
-.button {
-  width: 170px;
-  height: 46px;
-  flex-shrink: 0;
-  border-radius: 60px;
-  background: $color-elements;
-  color: $color-secondary;
-  font-size: 20px;
-  font-weight: 400;
-  cursor: pointer;
 }
 
 @media (hover: hover) {
