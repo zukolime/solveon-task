@@ -1,5 +1,5 @@
 import "../styles/promo-panel.scss";
-import arrow from "../resources/icons/arrow-up.svg";
+import { ReactComponent as Arrow } from "../resources/icons/arrow-up.svg";
 
 const PromoPanel = () => {
   return (
@@ -24,7 +24,7 @@ const PromoPanel = () => {
           </span>
         </div>
         <a href="/" className="promo-panel__link">
-          <img className="promo-panel__icon" src={arrow} alt="Стрелка" />
+          <Arrow className="promo-panel__icon" />
         </a>
       </div>
     </div>

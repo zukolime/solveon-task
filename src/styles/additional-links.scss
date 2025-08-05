@@ -1,0 +1,30 @@
+@import "../styles/variables.scss";
+
+.additional-links {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-underline-position: from-font;
+  }
+
+  &__item {
+    text-decoration-line: underline;
+    text-decoration-color: $color-primary;
+  }
+}
+
+@media (hover: hover) {
+  .additional-links__item:hover {
+    color: $color-elements;
+    text-decoration-color: $color-elements;
+  }
+}
