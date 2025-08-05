@@ -1,0 +1,56 @@
+@import "../styles/variables.scss";
+
+.offer {
+  display: flex;
+  gap: clamp(1.25rem, -0.571rem + 9.11vw, 7.625rem);
+  font-size: clamp(0.75rem, 0.607rem + 0.71vw, 1.25rem);
+  font-weight: 400;
+  line-height: normal;
+
+  &__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 74px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: clamp(0.625rem, 0.536rem + 0.45vw, 0.938rem);
+      height: clamp(0.625rem, 0.536rem + 0.45vw, 0.938rem);
+      background-color: $color-primary;
+      border-radius: 100%;
+    }
+  }
+
+  &__title {
+    font-size: clamp(0.75rem, 0.607rem + 0.71vw, 1.25rem);
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__subtitle {
+    color: rgba(6, 6, 6, 0.5);
+  }
+}
+
+@media (max-width: 1020px) {
+  .offer__left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 570px) {
+  .offer {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
