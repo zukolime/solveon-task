@@ -1,0 +1,49 @@
+@import "../styles/variables.scss";
+
+.slider {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__images-box {
+    width: 100%;
+    height: 420px;
+  }
+
+  &__image {
+    border-radius: 280px 60px 340px 280px;
+    background: lightgray 0px -152.332px / 104.191% 171.411% no-repeat;
+    object-fit: cover;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid $color-primary;
+    border-radius: 100%;
+    background-color: rgb(6, 6, 1, 0.2);
+    transition: opacity 0.3s;
+
+    &--active {
+      background: $color-primary;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .slider__dot:hover:not(.slider__dot--active) {
+    opacity: 0.2;
+  }
+}
