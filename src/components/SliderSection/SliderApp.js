@@ -33,7 +33,7 @@ const SliderApp = () => {
     <div className="slider">
       <div className="slider__wrapper">
         <div className="slider__images-box">
-          <img src={images[currentIndex]} alt={`изображение слайда ${currentIndex + 1}`} className="slider__image" />
+          <img loading="lazy" src={images[currentIndex]} alt={`изображение слайда ${currentIndex + 1}`} className="slider__image" />
         </div>
         <div className="slider__dots">
           {images.map((_, index) => (
