@@ -1,6 +1,6 @@
 import { ReactComponent as Arrow } from "../resources/icons/arrow-up.svg";
 import "../styles/promo-panel.scss";
-import CountdownTimer from "./CountdownTimer";
+import CountdownTimer from "./SliderSection/CountdownTimer";
 
 const PromoPanel = () => {
   return (

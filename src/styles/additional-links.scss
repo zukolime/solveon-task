@@ -28,3 +28,15 @@
     text-decoration-color: $color-elements;
   }
 }
+
+@media (max-width: 576px) {
+  .additional-links {
+    position: static;
+    width: 100%;
+
+    &__items {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

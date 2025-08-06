@@ -1,7 +1,7 @@
 import PromoPanel from "./PromoPanel";
-import HeaderApp from "./HeaderApp";
+import HeaderApp from "./HeaderApp/HeaderApp";
 import OfferHighlight from "./OfferHighlight";
-import SliderSection from "./SliderSection";
+import SliderSection from "./SliderSection/SliderSection";
 
 import "../styles/main.scss";
 

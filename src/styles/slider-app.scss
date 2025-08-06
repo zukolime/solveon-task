@@ -16,7 +16,7 @@
   }
 
   &__image {
-    border-radius: 280px 60px 340px 280px;
+    border-radius: 280px 60px 400px 280px;
     background: lightgray 0px -152.332px / 104.191% 171.411% no-repeat;
     object-fit: cover;
   }
@@ -45,5 +45,15 @@
 @media (hover: hover) {
   .slider__dot:hover:not(.slider__dot--active) {
     opacity: 0.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider__image {
+    border-radius: 60px 20px 140px 60px;
+  }
+
+  .slider__dots {
+    gap: 16px;
   }
 }

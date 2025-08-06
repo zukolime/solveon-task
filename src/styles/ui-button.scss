@@ -2,7 +2,7 @@
 
 .button {
   font-family: inherit;
-  font-size: inherit;
+  font-size: clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem);
   width: 170px;
   height: 46px;
   flex-shrink: 0;
