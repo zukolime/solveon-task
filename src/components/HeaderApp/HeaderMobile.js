@@ -4,23 +4,7 @@ import UIButton from "../UIButton";
 import { ReactComponent as CloseIcon } from "../../resources/icons/close.svg";
 import "../../styles/header-mobile.scss";
 
-const navLinks = [
-  { label: "Врачи", href: "/" },
-  { label: "услуги", href: "/" },
-  { label: "мед туризм", href: "/" },
-  { label: "омс", href: "/" },
-  { label: "контакты", href: "/" },
-];
-
-const subNavLinks = [
-  { label: "о клинике", href: "/" },
-  { label: "документы", href: "/" },
-  { label: "вакансии", href: "/" },
-  { label: "вопросы врачам", href: "/" },
-  { label: "новости", href: "/" },
-  { label: "справочник болезней", href: "/" },
-  { label: "сотрудничество", href: "/" },
-];
+import { mainNavLinks, subNavLinks } from "../../data/navLinks";
 
 const HeaderMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +41,7 @@ const HeaderMobile = () => {
 
           <div className="mobile-menu__content">
             <ul className="mobile-menu__items">
-              {navLinks.map((item) => (
+              {mainNavLinks.map((item) => (
                 <li key={item.label} className="mobile-menu__item">
                   <a className="mobile-menu__link" href={item.href}>
                     {item.label}

@@ -5,27 +5,7 @@ import NavItem from "./NavItem";
 import DropdownMenu from "./DropdownMenu";
 import ProfileLink from "./ProfileLink";
 
-const mainNavLinks = [
-  { label: "Врачи", href: "/" },
-  { label: "услуги", href: "/" },
-  { label: "мед туризм", href: "/" },
-  { label: "омс", href: "/" },
-  { label: "контакты", href: "/" },
-];
-
-const dropdownLinks = [
-  { label: "о клинике", href: "/" },
-  { label: "документы", href: "/" },
-  { label: "вакансии", href: "/" },
-  { label: "вопросы врачам", href: "/" },
-  { label: "новости", href: "/" },
-  {
-    label: "справочник болезней",
-    href: "/",
-    hasArrow: true,
-  },
-  { label: "сотрудничество", href: "/" },
-];
+import { mainNavLinks, subNavLinks } from "../../data/navLinks";
 
 const DesktopHeader = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -39,7 +19,7 @@ const DesktopHeader = () => {
 
         <li className="header__item" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
           <span className="header__item--trigger">ещё:</span>
-          {isDropdownOpen && <DropdownMenu links={dropdownLinks} />}
+          {isDropdownOpen && <DropdownMenu links={subNavLinks} />}
         </li>
       </ul>
 
