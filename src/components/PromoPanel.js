@@ -1,4 +1,5 @@
 import { ReactComponent as Arrow } from "../resources/icons/arrow-up.svg";
+import { Link } from "react-router-dom";
 import "../styles/promo-panel.scss";
 import CountdownTimer from "./SliderSection/CountdownTimer";
 
@@ -8,9 +9,9 @@ const PromoPanel = () => {
       <div className="promo-panel__inner">
         <p className="promo-panel__text">Скидка на Лазерную коррекцию до 60 %</p>
         <CountdownTimer targetDate="2025-08-13T00:00:00" />
-        <a href="/" className="promo-panel__link">
+        <Link to="/" className="promo-panel__link">
           <Arrow className="promo-panel__icon" />
-        </a>
+        </Link>
       </div>
     </div>
   );

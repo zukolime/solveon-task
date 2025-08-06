@@ -1,3 +1,5 @@
+import { BrowserRouter as Router } from "react-router-dom";
+
 import PromoPanel from "./PromoPanel";
 import HeaderApp from "./HeaderApp/HeaderApp";
 import OfferHighlight from "./OfferHighlight";
@@ -7,7 +9,7 @@ import "../styles/main.scss";
 
 function App() {
   return (
-    <>
+    <Router>
       <PromoPanel></PromoPanel>
       <HeaderApp></HeaderApp>
       <main>
@@ -16,7 +18,7 @@ function App() {
           <SliderSection></SliderSection>
         </div>
       </main>
-    </>
+    </Router>
   );
 }
 

@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const NavItem = ({ label, href }) => (
   <li className="header__item">
-    <a href={href} className="header__link">
+    <Link to={href} className="header__link">
       {label}
-    </a>
+    </Link>
   </li>
 );
 
