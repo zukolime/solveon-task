@@ -1,7 +1,7 @@
 import "../styles/ui-button.scss";
 
-const UIButton = () => {
-  return <button className="button">Записаться</button>;
+const UIButton = ({ text, classNames = "" }) => {
+  return <button className={`button ${classNames}`}>{text}</button>;
 };
 
 export default UIButton;
