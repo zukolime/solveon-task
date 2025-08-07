@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import BurgerButton from "./BurgerButton";
 import UIButton from "../UIButton";
 import { ReactComponent as CloseIcon } from "../../resources/icons/close.svg";
-import NavItem from "./NavItem";
 import "../../styles/header-mobile.scss";
 
 import { mainNavLinks, subNavLinks } from "../../data/navLinks";
