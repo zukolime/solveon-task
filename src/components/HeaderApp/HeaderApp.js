@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-import DesktopHeader from "./DesktopHeader";
+import HeaderDesktop from "./HeaderDesktop";
 import HeaderMobile from "./HeaderMobile";
 import HeaderLogo from "./HeaderLogo";
-
-// import NavItem from "./NavItem";
-// import DropdownMenu from "./DropdownMenu";
-// import ProfileLink from "./ProfileLink";
-// import UIButton from ""../UIButton"";
 
 import "../../styles/header-app.scss";
 
@@ -29,7 +24,7 @@ const HeaderApp = () => {
     <header className="header">
       <div className="container">
         <HeaderLogo />
-        {isMobile ? <HeaderMobile /> : <DesktopHeader />}
+        {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
       </div>
     </header>
   );

@@ -1,20 +1,23 @@
 import { useState } from "react";
 
 import UIButton from "../UIButton";
-import NavItem from "./NavItem";
 import DropdownMenu from "./DropdownMenu";
 import ProfileLink from "./ProfileLink";
 
 import { mainNavLinks, subNavLinks } from "../../data/navLinks";
 
-const DesktopHeader = () => {
+const HeaderDesktop = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <nav className="header__navbar">
       <ul className="header__items">
         {mainNavLinks.map((item) => (
-          <NavItem key={item.label} label={item.label} href={item.href} />
+          <li className="header__item" key={item.label} label={item.label}>
+            <a className="header__link" href={item.href}>
+              {item.label}
+            </a>
+          </li>
         ))}
 
         <li className="header__item" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
@@ -33,4 +36,4 @@ const DesktopHeader = () => {
   );
 };
 
-export default DesktopHeader;
+export default HeaderDesktop;
