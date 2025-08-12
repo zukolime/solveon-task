@@ -8,7 +8,7 @@ const PromoPanel = () => {
     <div className="promo-panel">
       <div className="promo-panel__inner">
         <p className="promo-panel__text">Скидка на Лазерную коррекцию до 60 %</p>
-        <CountdownTimer targetDate="2025-08-13T00:00:00" />
+        <CountdownTimer targetDate="2025-09-13T00:00:00" />
         <Link to="/" className="promo-panel__link">
           <Arrow className="promo-panel__icon" />
         </Link>
